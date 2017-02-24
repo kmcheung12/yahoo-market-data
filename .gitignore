@@ -1,0 +1,4 @@
+# python stuff
+*.py[cdo]
+# virtualenv
+env
