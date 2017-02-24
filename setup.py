@@ -1,0 +1,31 @@
+from distutils.core import setup
+setup(
+        name = 'yahoo-market-data',
+        packages = ['yahoo_market_data'],
+        version = '0.0.1',
+        description = 'A python library to retrieve quotes from yahoo finance.',
+        author = 'KM Cheung',
+        author_email = 'kmcheung12@gmail.com', 
+        url = 'https://github.com/kmcheung12/yahoo-market-data',
+        download_url = 'https://github.com/kmcheung12/yahoo-market-data/tarball/0.0.1',
+        license='MIT',
+        keywords = ['yahoo', 'finance', 'market-data', 'stock'],
+        classifiers = [
+            'Development Status :: 4 - Beta',
+            'Intended Audience :: Developers',
+            'Intended Audience :: Financial and Insurance Industry',
+            'License :: OSI Approved :: MIT License',
+            'Natural Language :: English',
+            'Programming Language :: Python :: 3',
+            'Programming Language :: Python :: 3.0',
+            'Programming Language :: Python :: 3.1',
+            'Programming Language :: Python :: 3.2',
+            'Programming Language :: Python :: 3.3',
+            'Programming Language :: Python :: 3.4',
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6',
+            'Topic :: Office/Business :: Financial :: Investment',
+            'Topic :: Software Development :: Libraries :: Python Modules'
+            ],
+        install_requires=['bs4', 'lxml'],
+        )
