@@ -2,3 +2,7 @@
 *.py[cdo]
 # virtualenv
 env
+
+# packaging stuff
+dist
+MANIFEST

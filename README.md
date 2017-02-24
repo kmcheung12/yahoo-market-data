@@ -1,14 +1,14 @@
 # yahoo-market-data
 A python library to retrieve quotes from yahoo finance.
 
-## Installation
-pip: `TBC`
+## Installation (Python 3.x only)
+pip: `pip install yahoo-market-data`
 
 Source: `git clone git@github.com:kmcheung12/yahoo-market-data.git`
 
 ## Usage
 ### Get stocks symbols by market:
-```
+```python
 >>> from yahoo_market_data import Symbols
 >>> Symbols.nyse()
 ['DDD',
@@ -24,20 +24,23 @@ Source: `git clone git@github.com:kmcheung12/yahoo-market-data.git`
 Currently support markets are `nyse`, `nasdaq`, `amex`, `hkex` and `hkgem`
 
 ### Get realtime stocks data from Yahoo finance
-```
+```python
 >>> from yahoo_market_data import Quote
+>>>
+>>> # support multiple symbols at one go
+>>> # see below for all available fields
 >>> q = Quote()\
-        .set_symbols("DDD", "MMM")\ # support multiple symbols at one go
+        .set_symbols("DDD", "MMM")\
         .change\
         .last_trade_price_only\
-        .name # see below for all available fields
-    q.quote()
+        .name
+>>> q.quote()
 ['-0.20,16.63,"3D Systems Corporation Common S"',
 '+1.15,187.19,"3M Company Common Stock"']
 ```
 ### Get historical stocks data from Yahoo finance
 
-```
+```python
 >>> Quote.historical_quote('AAPL', '2016-01-01', '2016-01-07')
 ['Date,Open,High,Low,Close,Volume,Adj Close',
  '2016-01-07,98.68,100.129997,96.43,96.449997,81094400,93.943473',
